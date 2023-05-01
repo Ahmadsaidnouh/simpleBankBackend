@@ -6,7 +6,7 @@ const cors = require("cors");
 const { userRoutes, transferRoutes } = require("./routes/allroutes");
 const initConnection = require("./DB/config");
 
-app.use(cors());
+app.use(cors({}));
 app.use(express.json());
 app.use(userRoutes, transferRoutes);
 initConnection();
